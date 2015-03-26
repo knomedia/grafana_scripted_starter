@@ -1,0 +1,20 @@
+{
+  "name": "grafana_scripted_starter",
+  "version": "0.0.1",
+  "description": "when you want to build a grafana scripted dashboard, but also want cjs, npm, and an actual build",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/ --reporter spec",
+    "build": "BUILD_FILE=request.js ./script/build.sh",
+    "dev": "BUILD_FILE=request.js ./script/dev.sh"
+  },
+  "author": "knomedia@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "fsmonitor": "^0.2.4",
+    "mocha": "^2.2.1",
+    "webpack": "^1.7.3"
+  },
+  "dependencies": {
+  }
+}
