@@ -58,7 +58,8 @@ When you're ready, `npm run build` to build a minified version into a `build` di
 Grafana loads your script as the body of a `new Function` (see
 [here](https://github.com/grafana/grafana/blob/master/src%2Fapp%2Froutes%2Fstandalone%2FfromScript.js#L33)
 for details). This means that we need to prepend a return statement to the
-webpack built file. The files in `script` will take care of this for you.
+webpack built file. The files in `script` will take care of this for you, and
+happens automatically when you use `npm run build` or `npm run dev`.
 
 Your main file (`index.js`) needs to export either a grafana `dashboard` object  or
 a function (for async scripted dashboards).
